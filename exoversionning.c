@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main (){
-    int n,x,i;
+    int n,x,i,moyenne,somme,cpt;
     do{
        printf("saisir n entiers : ");
        scanf("%d",&n);
@@ -11,8 +11,14 @@ int main (){
         puts("veuillez saisir un entier negatif : ");
         scanf("%d",&x);
     }while(n<0);
-        printf("le nombre saisi est : %d",x);
+    for(i=0;i<n;i++){
+        puts("veuillez saisir des entiers negatifs : ");
         scanf("%d",&x);
+        somme=somme+x;
+        cpt++;
+       }
     }
+     moyenne=somme/cpt;
+      printf("La moyenne des nombres pairs est %d",moyenne);
 return 0;
 }
